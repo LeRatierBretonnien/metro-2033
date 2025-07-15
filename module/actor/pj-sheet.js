@@ -1,11 +1,11 @@
 import { MYZActorSheet } from "./actor-sheet.js";
 
-export class MYZHumanSheet extends MYZActorSheet {
+export class MYZPJSheet extends MYZActorSheet {
     /** @override */
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {
-            classes: ["mutant-year-zero", "sheet", "actor"],
-            template: "systems/mutant-year-zero/templates/actor/human-sheet.html",
+            classes: ["metro-2033", "sheet", "actor"],
+            template: "systems/metro-2033/templates/actor/pj-sheet.html",
             width: 720,
             height: 720,
             tabs: [

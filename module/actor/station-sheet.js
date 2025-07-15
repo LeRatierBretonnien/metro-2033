@@ -4,14 +4,14 @@ import { RollDialog } from "../app/roll-dialog.js";
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-export class MYZSpaceshipSheet extends foundry.appv1.sheets.ActorSheet {
+export class MYZStationSheet extends foundry.appv1.sheets.ActorSheet {
 
     //diceRoller = new DiceRoller();
 
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {
-            classes: ["mutant-year-zero", "sheet", "actor"],
-            template: "systems/mutant-year-zero/templates/actor/spaceship-sheet.html",
+            classes: ["metro-2033", "sheet", "actor"],
+            template: "systems/metro-2033/templates/actor/station-sheet.html",
             width: 660,
             height: 550,
             tabs: [
@@ -76,7 +76,7 @@ export class MYZSpaceshipSheet extends foundry.appv1.sheets.ActorSheet {
             }
         }
         context.occupants = occupants;
-        
+
     }
 
     _prepareItems(context){
@@ -132,7 +132,7 @@ export class MYZSpaceshipSheet extends foundry.appv1.sheets.ActorSheet {
             this._editOwnedItemById(li.data("item-id"));
         });
 
-        /**DELETE INVENTORY ITEM */ 
+        /**DELETE INVENTORY ITEM */
         html.find(".item-delete").click((ev) => {
             const li = $(ev.currentTarget).parents(".box-item");
             this._deleteOwnedItemById(li.data("item-id"));
@@ -142,7 +142,7 @@ export class MYZSpaceshipSheet extends foundry.appv1.sheets.ActorSheet {
         /** SEND TO CHAT */
         html.find(".chatable").click(this._onItemSendToChat.bind(this));
 
-        /** CHANGE ITEM VALUE */ 
+        /** CHANGE ITEM VALUE */
          html.find(".owned-item-value").change(this._onChangeOwnedItemValue.bind(this));
 
           /* -------------------------------------------- */
@@ -197,19 +197,19 @@ export class MYZSpaceshipSheet extends foundry.appv1.sheets.ActorSheet {
     }
 
     async _onDropOccupantActor(event) {
-        event.preventDefault();        
+        event.preventDefault();
         const data = JSON.parse(event.originalEvent.dataTransfer.getData('text/plain'));
         if(data.type=="Item"){
             //event.stopPropagination()
             return false;
         }
-        let occupantActor = await fromUuid(data.uuid);        
+        let occupantActor = await fromUuid(data.uuid);
         if(occupantActor?.type == "vehicle" || occupantActor?.type=="ark" || occupantActor?.type=="spaceship"){
             ui.notifications.warn("You can't add vehicle, ark or spaceship actors");
             //event.stopPropagination()
             return false;
         }
-        
+
         if (this.actor.system.occupants.length < this.actor.system.occupantsCount) {
             if (!this.actor.system.occupants.includes(data.uuid))
                 this._addOccupant(data.uuid)
@@ -247,7 +247,7 @@ export class MYZSpaceshipSheet extends foundry.appv1.sheets.ActorSheet {
         const skillKey = $(event.currentTarget).data("skillkey");
         const occupants = this.actor.system.occupants;
         const shipGearBonus = $(event.currentTarget).data("gearbonus");
-        // TODO 
+        // TODO
         // ! open dialog to pickup the occupant
         // ! calculate occupant attr + skill + gear + ship gear
         // ? how to resolve pushes ?
@@ -268,7 +268,7 @@ export class MYZSpaceshipSheet extends foundry.appv1.sheets.ActorSheet {
             await _item.update({ [valueToChange]: newValue });
         }
     }
-  
+
     async _onItemCreate(event) {
         event.preventDefault();
         const header = event.currentTarget;

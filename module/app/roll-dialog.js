@@ -67,7 +67,7 @@ export class RollDialog {
     };
 
     const htmlContent = await renderTemplate(
-      "systems/mutant-year-zero/templates/app/roll-dialog.html",
+      "systems/metro-2033/templates/app/roll-dialog.html",
       htmlData
     );
     let dialog;
@@ -88,7 +88,7 @@ export class RollDialog {
               let base = button.form.elements.base.value;
               let skill = button.form.elements.skill.value;
               let gear = button.form.elements.gear.value;
-              
+
               DiceRoller.Roll({
                 rollName: rollName,
                 base: parseInt(base, 10),

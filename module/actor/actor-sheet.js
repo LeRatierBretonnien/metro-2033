@@ -26,8 +26,8 @@ export class MYZActorSheet extends foundry.appv1.sheets.ActorSheet {
             options: this.options,
             editable: this.isEditable,
             type: this.actor.type,
-            isCharacter: this.actor.type === "character",
-            isNPC: this.actor.type === "npc",
+            isCharacter: this.actor.type === "pj",
+            isNPC: this.actor.type === "pnj",
             isVehicle: this.actor.type === "vehicle",
             rollData: this.actor.getRollData.bind(this.actor)
         }
@@ -112,7 +112,7 @@ export class MYZActorSheet extends foundry.appv1.sheets.ActorSheet {
         skills.sort((a, b)=> {
             if (a.system.attribute === b.system.attribute){
               return a.system.skillKey < b.system.skillKey ? -1 : 1
-            } 
+            }
           })
 
         // Assign and return
@@ -132,12 +132,10 @@ export class MYZActorSheet extends foundry.appv1.sheets.ActorSheet {
         context.criticals = criticals;
 
         // pack inventory for NPCs
-        if(context.actor.type=="npc"){
+        if(context.actor.type=="pnj"){
             context.npcInventory = [...gear, ...artifacts]
             if(context.system.creatureType=="mutant"){
                 context.npcInventory = [...context.npcInventory, ...chassis]
-            }else if(context.system.creatureType=="robot"){
-                context.npcInventory = [...context.npcInventory, ...armor]
             }
             else if(context.system.creatureType=="animal"){
                 context.npcInventory = [...context.npcInventory, ...chassis]
@@ -145,7 +143,7 @@ export class MYZActorSheet extends foundry.appv1.sheets.ActorSheet {
             else if(context.system.creatureType=="human"){
                 context.npcInventory = [...context.npcInventory, ...chassis]
             }
-        }        
+        }
     }
     /* -------------------------------------------- */
 
@@ -259,11 +257,7 @@ export class MYZActorSheet extends foundry.appv1.sheets.ActorSheet {
             let testName = weapon.name;
             let skill;
             if (weapon.system.category === "melee") {
-                if (this.actor.system.creatureType != "robot") {
-                    skill = this.actor.items.contents.find((i) => i.system.skillKey == "FIGHT");
-                } else {
-                    skill = this.actor.items.contents.find((i) => i.system.skillKey === "ASSAULT");
-                }
+                skill = this.actor.items.contents.find((i) => i.system.skillKey == "FIGHT");
             } else {
                 skill = this.actor.items.contents.find((i) => i.system.skillKey == "SHOOT");
             }
@@ -294,7 +288,7 @@ export class MYZActorSheet extends foundry.appv1.sheets.ActorSheet {
                 diceRoller: this.diceRoller,
                 base: {default:attValue, total: rollModifiers.baseDiceTotal, modifiers: rollModifiers.modifiersToAttributes},
                 skill: {default:skill.system.value, total: rollModifiers.skillDiceTotal, modifiers: rollModifiers.modifiersToSkill},
-                gear: {default:parseInt(weapon.system.bonus.value), total: rollModifiers.gearDiceTotal, modifiers: rollModifiers.modifiersToGear},                
+                gear: {default:parseInt(weapon.system.bonus.value), total: rollModifiers.gearDiceTotal, modifiers: rollModifiers.modifiersToGear},
                 modifierDefault: weapon.system.skillBonus,
                 artifactDefault: weapon.system.artifactBonus || 0,
                 damage: weapon.system.damage,
@@ -396,7 +390,7 @@ export class MYZActorSheet extends foundry.appv1.sheets.ActorSheet {
 
         new ContextMenu(html, ".editable-item", menu_items);
 
-        new ContextMenu(html, ".editable-armor", [            
+        new ContextMenu(html, ".editable-armor", [
             {
                 icon: `<i class="fa-solid fa-shirt" title="${equipLabel}"></i>`,
                 name: '',
@@ -418,12 +412,12 @@ export class MYZActorSheet extends foundry.appv1.sheets.ActorSheet {
             });
         }*/
     }
-    
+
 
     async _updateNPCCreatureType(event) {
         let _creatureType = $(event.currentTarget).data("creature");
-        let img = `systems/mutant-year-zero/assets/ico/img-${_creatureType}.svg`
-        await this.actor.update({ "system.creatureType": _creatureType, "img": img});       
+        let img = `systems/metro-2033/assets/ico/img-${_creatureType}.svg`
+        await this.actor.update({ "system.creatureType": _creatureType, "img": img});
         this.actor.sheet.render();
     }
 
@@ -508,7 +502,7 @@ export class MYZActorSheet extends foundry.appv1.sheets.ActorSheet {
         const attVal = this.actor.system.attributes[attName].value;
         let rollName = `MYZ.ATTRIBUTE_${attName.toUpperCase()}_${this.actor.system.creatureType.toUpperCase()}`;
 
-        const rollModifiers = this._getAttibuteModifiers(attName)        
+        const rollModifiers = this._getAttibuteModifiers(attName)
         rollModifiers.skillDiceTotal = 0;
         rollModifiers.modifiersToSkill = [];
         rollModifiers.gearDiceTotal = 0;
@@ -520,7 +514,7 @@ export class MYZActorSheet extends foundry.appv1.sheets.ActorSheet {
             diceRoller: this.diceRoller,
             base: {default:attVal, total: rollModifiers.baseDiceTotal, modifiers:rollModifiers.modifiersToAttributes},
             skill: {default:0, total: rollModifiers.skillDiceTotal, modifiers:rollModifiers.modifiersToSkill},
-            gear: {default:0, total: rollModifiers.gearDiceTotal, modifiers:rollModifiers.modifiersToGear},            
+            gear: {default:0, total: rollModifiers.gearDiceTotal, modifiers:rollModifiers.modifiersToGear},
             modifierDefault: 0,
             actor: this.actor,
             actorUuid: this.actor.uuid
@@ -541,7 +535,7 @@ export class MYZActorSheet extends foundry.appv1.sheets.ActorSheet {
             const skill = this.actor.items.find((element) => element.id == itemId);
             const attName = skill.system.attribute;
             const attValue = this.actor.system.attributes[attName].value;
-            // Apply any modifiers from items or crits          
+            // Apply any modifiers from items or crits
             const rollModifiers = this._getRollModifiers(skill);
             rollModifiers.gearDiceTotal = Math.max(0, rollModifiers.gearDiceTotal);
 
@@ -601,21 +595,21 @@ export class MYZActorSheet extends foundry.appv1.sheets.ActorSheet {
 
     _getRollModifiers(skill) {
         // SKILL MODIFIERS
-        let skillDiceTotal = parseInt(skill.system.value);     
+        let skillDiceTotal = parseInt(skill.system.value);
         const itmMap = this.actor.items.filter(itm => itm.system.modifiers != undefined)
         const itemsThatModifySkill = itmMap.filter(i => i.system.modifiers[skill.system.skillKey] != 0)
         let modifiersToSkill = [];
 
-        if(skill.system.skillKey!=""){ 
+        if(skill.system.skillKey!=""){
             const skillDiceModifier = itemsThatModifySkill.reduce(function (acc, obj) {
                 modifiersToSkill.push({ 'type': obj.type, 'name': obj.name, 'value': obj.system.modifiers[skill.system.skillKey] })
                 return acc + obj.system.modifiers[skill.system.skillKey];
-            }, 0);        
+            }, 0);
             skillDiceTotal += parseInt(skillDiceModifier)
         }
-        // ATTRIBUTE MODIFIERS  
+        // ATTRIBUTE MODIFIERS
         const attrModifiers = this._getAttibuteModifiers(skill.system.attribute)
-        // GEAR MODIFIERS  
+        // GEAR MODIFIERS
         const itmGMap = this.actor.items.filter(itm => itm.system.gearModifiers != undefined)
         const itemsThatModifyGear = itmGMap.filter(i => i.system.gearModifiers[skill.system.skillKey] != 0)
         let modifiersToGear = []

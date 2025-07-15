@@ -9,9 +9,9 @@ export class MYZItem extends Item {
         if (this.img == 'icons/svg/item-bag.svg') {
             let _itemImg = '';
             if (this.parent && (this.type == 'ability' || this.type == 'talent')) {
-                _itemImg = `systems/mutant-year-zero/assets/ico/${this.type}_${this.parent.system.creatureType}.svg`;
+                _itemImg = `systems/metro-2033/assets/ico/${this.type}_${this.parent.system.creatureType}.svg`;
             } else {
-                _itemImg = `systems/mutant-year-zero/assets/ico/${this.type}.svg`;
+                _itemImg = `systems/metro-2033/assets/ico/${this.type}.svg`;
             }
             this.updateSource({"img":_itemImg})
         }
@@ -44,7 +44,7 @@ export class MYZItem extends Item {
         if (this.parent)
             itemData.creatureType = this.actor.system.creatureType;
 
-        const html = await renderTemplate("systems/mutant-year-zero/templates/chat/item.html", itemData);
+        const html = await renderTemplate("systems/metro-2033/templates/chat/item.html", itemData);
         const chatData = {
             user: game.user.id,
             rollMode: game.settings.get("core", "rollMode"),

@@ -1,22 +1,22 @@
 export default class MYZHooks {
 
-    static async onCreateActor(actor, options, userId) {        
+    static async onCreateActor(actor, options, userId) {
         // Set creatureType and use it for building NPCS and PCs
         // NPCs should have type=npc and ceratureType = mutant/animal/robot/human
         // PCs should have type=mutant/animal/robot/human and ceratureType = mutant/animal/robot/human
         if(game.user.id!== userId)
-            return; 
+            return;
         let updateData = {};
         updateData["token.disposition"] = CONST.TOKEN_DISPOSITIONS.NEUTRAL;
-        updateData["token.vision"] = true;        
+        updateData["token.vision"] = true;
         if (actor.type != "npc") {
             updateData["system.creatureType"] = actor.type;
             updateData["token.actorLink"] = true;
-            updateData["img"] = `systems/mutant-year-zero/assets/ico/img-${actor.type}.svg`
+            updateData["img"] = `systems/metro-2033/assets/ico/img-${actor.type}.svg`
         }
         if (actor.type == "npc") {
             if (actor.system.creatureType == "")
-                updateData["system.creatureType"] = actor.type;           
+                updateData["system.creatureType"] = actor.type;
         }
         await actor.update(updateData, { renderSheet: true });
 
@@ -29,7 +29,7 @@ export default class MYZHooks {
             const existingSkills = actor.items.filter((i) => i.type === 'skill').map((i) => i.system.skillKey);
             const skillsToAdd = actorCoreSkills.filter((s) => !existingSkills.includes(s));
             // Load Core Skills Compendium skills
-            let skillIndex = await game.packs.get("mutant-year-zero.core-skills").getDocuments();
+            let skillIndex = await game.packs.get("metro-2033.core-skills").getDocuments();
             // TRY TO GET THE OFFICIAL SKILL CONTENT IF IT IS PRESENT
             const errMsgOfficialSkills = 'No official skill compendium found, reverting to the free content.';
             if (actor.system.creatureType == 'mutant') {
@@ -66,22 +66,22 @@ export default class MYZHooks {
             let _skillsList = skillIndex.filter((i) => skillsToAdd.includes(i.system.skillKey));
             // Add ACTOR TYPE and CORE to each skill in _skillsList before you assign it to the actor;
             let _sl = [];
-            _skillsList.forEach((s) => {                
+            _skillsList.forEach((s) => {
                 s.system["creatureType"] = actor.type;
                 s.system["coreSkill"] = true;
                 _sl.push(s);
             });
             await actor.createEmbeddedDocuments("Item", _sl);
-        }        
+        }
     }
 
     static onUpdateOwnedItem(item, updateData, option, _id) {
-        // UPDATING OWNED ITEM        
+        // UPDATING OWNED ITEM
         if (!item.parent) return;
-        
+
         // ! MAKE SURE OWNED SKILLS/ABILITIES/TALENTS ARE OF THE SAME TYPE AS THE ACTOR
-        if (item.type == "skill" || item.type == "ability" || item.type == "talent") {            
-            updateData.system.creatureType = item.actor.system.creatureType;                   
+        if (item.type == "skill" || item.type == "ability" || item.type == "talent") {
+            updateData.system.creatureType = item.actor.system.creatureType;
         }
     }
 
@@ -105,7 +105,7 @@ export default class MYZHooks {
             ui.notifications.warn(`You can't assign Criticals to a robot character`);
             return false;
         }
-        if (item.type == "skill" || item.type == "ability" || item.type == "talent") {           
+        if (item.type == "skill" || item.type == "ability" || item.type == "talent") {
             item.updateSource({"system.creatureType": item.actor.system.creatureType})
         }
     }

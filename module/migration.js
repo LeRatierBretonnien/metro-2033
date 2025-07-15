@@ -42,9 +42,9 @@ export const migrateWorld = async function () {
         console.log(`Migrating Compendium ${p.name}`);
         await migrateCompendium(p);
     }
-    
+
     // Set the migration as complete
-    game.settings.set("mutant-year-zero", "systemMigrationVersion", game.system.data.version);
+    game.settings.set("metro-2033", "systemMigrationVersion", game.system.data.version);
     ui.notifications.info(`MYZ System Migration to version ${game.system.data.version} completed!`, { permanent: true });
     */
 };

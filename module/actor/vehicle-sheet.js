@@ -10,8 +10,8 @@ export class MYZVehicleSheet extends foundry.appv1.sheets.ActorSheet {
 
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {
-            classes: ["mutant-year-zero", "sheet", "actor"],
-            template: "systems/mutant-year-zero/templates/actor/vehicle-sheet.html",
+            classes: ["metro-2033", "sheet", "actor"],
+            template: "systems/metro-2033/templates/actor/vehicle-sheet.html",
             width: 600,
             height: 680,
             tabs: [
@@ -137,19 +137,19 @@ export class MYZVehicleSheet extends foundry.appv1.sheets.ActorSheet {
     }
 
     async _onDropOccupantActor(event) {
-        event.preventDefault();        
+        event.preventDefault();
         const data = JSON.parse(event.originalEvent.dataTransfer.getData('text/plain'));
         if(data.type=="Item"){
             //event.stopPropagination()
             return false;
         }
-        let occupantActor = await fromUuid(data.uuid);        
+        let occupantActor = await fromUuid(data.uuid);
         if(occupantActor?.type == "vehicle" || occupantActor?.type=="ark"){
             ui.notifications.warn("You can't add vehicle or ark actors");
             //event.stopPropagination()
             return false;
         }
-        
+
         if (this.actor.system.occupants.length < this.actor.system.occupantsCount) {
             if (!this.actor.system.occupants.includes(data.uuid))
                 this._addOccupant(data.uuid)
