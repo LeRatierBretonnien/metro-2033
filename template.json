@@ -1,6 +1,6 @@
 {
 	"Actor": {
-		"types": ["mutant", "animal", "robot", "human", "npc", "ark", "vehicle","spaceship"],
+		"types": ["mutant", "pj", "pnj", "vehicle","station"],
 		"templates": {
 			"base": {
 				"role": "",
@@ -117,27 +117,7 @@
 				"max": 10
 			}
 		},
-		"animal": {
-			"templates": ["base", "stats", "status"],
-			"description": "",
-			"coreSkills": ["ENDURE", "FORCE", "FIGHT", "SNEAK", "MOVE", "SHOOT", "SCOUT", "COMPREHEND", "KNOWNATURE", "SENSEEMOTION", "DOMINATE", "HEAL"],
-			"resource_points": {
-				"label": "MYZ.FERAL_POINTS",
-				"value": 0,
-				"max": 10
-			}
-		},
-		"robot": {
-			"templates": ["base", "stats", "status"],
-			"description": "",
-			"coreSkills": ["OVERLOAD", "FORCE", "ASSAULT", "INFILTRATE", "MOVE", "SHOOT", "SCAN", "DATAMINE", "ANALYZE", "QUESTION", "INTERACT", "REPAIR"],
-			"resource_points": {
-				"label": "MYZ.ENERGY_POINTS",
-				"value": 0,
-				"max": 10
-			}
-		},
-		"human": {
+		"pj": {
 			"templates": ["base", "stats", "status"],
 			"description": "",
 			"coreSkills": ["ENDURE", "FORCE", "FIGHT", "SNEAK", "MOVE", "SHOOT", "SCOUT", "COMPREHEND", "KNOWTHEZONE", "SENSEEMOTION", "MANIPULATE", "HEAL"],
@@ -157,64 +137,6 @@
 			},
 			"knowNature": 0,
 			"special": ""
-		},
-		"ark": {
-			"ark_type": "",
-			"coordinates": "",
-			"description": "",
-			"population": "",
-			"water_source": "",
-			"season": "",
-			"dev_levels": {
-				"food": {
-					"value": 0,
-					"max": 0
-				},
-				"culture": {
-					"value": 0,
-					"max": 0
-				},
-				"technology": {
-					"value": 0,
-					"max": 0
-				},
-				"warfare": {
-					"value": 0,
-					"max": 0
-				}
-			},
-			"bosses": {
-				"boss1": {
-					"name": "",
-					"type": "",
-					"description": ""
-				},
-				"boss2": {
-					"name": "",
-					"type": "",
-					"description": ""
-				},
-				"boss3": {
-					"name": "",
-					"type": "",
-					"description": ""
-				},
-				"boss4": {
-					"name": "",
-					"type": "",
-					"description": ""
-				},
-				"boss5": {
-					"name": "",
-					"type": "",
-					"description": ""
-				},
-				"boss6": {
-					"name": "",
-					"type": "",
-					"description": ""
-				}
-			}
 		},
 		"vehicle":{
 			"movementBonus":{
@@ -241,7 +163,7 @@
 			"occupants":[],
 			"cost":0
 		},
-		"spaceship":{
+		"station":{
 			"hull":{
 				"max":0, "value":0
 			},
@@ -304,17 +226,17 @@
 					"agility":0,
 					"wits":0,
 					"empathy":0,
-					"ENDURE":0, 
-					"FORCE":0, 
-					"FIGHT":0, 
-					"SNEAK":0, 
-					"MOVE":0, 
-					"SHOOT":0, 
-					"SCOUT":0, 
-					"COMPREHEND":0, 
+					"ENDURE":0,
+					"FORCE":0,
+					"FIGHT":0,
+					"SNEAK":0,
+					"MOVE":0,
+					"SHOOT":0,
+					"SCOUT":0,
+					"COMPREHEND":0,
 					"KNOWTHEZONE":0,
-					"SENSEEMOTION":0, 
-					"MANIPULATE":0, 
+					"SENSEEMOTION":0,
+					"MANIPULATE":0,
 					"HEAL":0,
 					"KNOWNATURE":0,
 					"DOMINATE":0,
@@ -361,17 +283,17 @@
 					"agility":0,
 					"wits":0,
 					"empathy":0,
-					"ENDURE":0, 
-					"FORCE":0, 
-					"FIGHT":0, 
-					"SNEAK":0, 
-					"MOVE":0, 
-					"SHOOT":0, 
-					"SCOUT":0, 
-					"COMPREHEND":0, 
+					"ENDURE":0,
+					"FORCE":0,
+					"FIGHT":0,
+					"SNEAK":0,
+					"MOVE":0,
+					"SHOOT":0,
+					"SCOUT":0,
+					"COMPREHEND":0,
 					"KNOWTHEZONE":0,
-					"SENSEEMOTION":0, 
-					"MANIPULATE":0, 
+					"SENSEEMOTION":0,
+					"MANIPULATE":0,
 					"HEAL":0,
 					"KNOWNATURE":0,
 					"DOMINATE":0,
@@ -411,7 +333,7 @@
 					"PROSECUTE":0,
 					"ENLIGHTEN":0,
 					"PRESSON":0,
-					"TINKER":0					
+					"TINKER":0
 				}
 			}
 		},
@@ -420,7 +342,7 @@
 			"value": 0,
 			"min": 0,
 			"attribute": "",
-			"creatureType": "mutant",
+			"creatureType": "pj",
 			"coreSkill": "",
 			"skillKey": ""
 		},

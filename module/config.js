@@ -1,4 +1,4 @@
-export class MYZ {   
+export class MYZ {
     static STUNTS = {}
 
     static SKILLKEYS = ["ANALYZE",
@@ -54,12 +54,10 @@ export class MYZ {
         "TINKER"]
 
     static CREATURE_TYPES = {
-        "mutant":"MYZ.MUTANT",
-        "animal":"MYZ.ANIMAL",
-        "robot":"MYZ.ROBOT",
-        "human":"MYZ.HUMAN"
+        "pj":"MYZ.PJ",
+        "mutant":"MYZ.MUTANT"
     }
-    
+
     static ATTRIBUTES = {
         "strength":"MYZ.ATTRIBUTE_STRENGTH",
         "agility":"MYZ.ATTRIBUTE_AGILITY",
@@ -87,7 +85,7 @@ export class MYZ {
         "0.50": "MYZ.WEIGHT_LIGHT",
         "1.00": "MYZ.WEIGHT_REGULAR",
         "2.00": "MYZ.WEIGHT_HEAVY"
-    }   
+    }
 
     static WEAPON_CATEGORIES = {
         "melee":"MYZ.WEAPON_MELEE",
@@ -98,12 +96,11 @@ export class MYZ {
         "armor": "MYZ.ARMOR_BODY",
         "shield": "MYZ.ARMOR_SHIELD",
     }
-    
+
     static TALENT_CREATURE_TYPES = {
         "mutant":"MYZ.TALENT_MUTANT",
         "animal":"MYZ.TALENT_ANIMAL",
-        "robot":"MYZ.TALENT_ROBOT",
-        "human":"MYZ.TALENT_HUMAN"
+        "pnj":"MYZ.TALENT_PNJ"
     }
 
     static TALENT_ROLE_TYPES = {

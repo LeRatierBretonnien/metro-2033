@@ -393,7 +393,7 @@ $font-secondary: 'Roboto', sans-serif;*/
 }
 
 /* Styles limited to mutant-year-zero sheets */
-.mutant-year-zero {
+.metro-2033 {
   /*SPACESHIP*/
   /* .tabs {
      .item {
@@ -414,58 +414,58 @@ $font-secondary: 'Roboto', sans-serif;*/
      }
    }*/
 }
-.mutant-year-zero .flex {
+.metro-2033 .flex {
   display: flex;
 }
-.mutant-year-zero .row {
+.metro-2033 .row {
   flex-direction: row;
 }
-.mutant-year-zero .column {
+.metro-2033 .column {
   flex-direction: column;
 }
-.mutant-year-zero .full {
+.metro-2033 .full {
   width: 100%;
   height: 100%;
 }
-.mutant-year-zero .wrap {
+.metro-2033 .wrap {
   flex-wrap: wrap;
 }
-.mutant-year-zero .half {
+.metro-2033 .half {
   flex: 0 0 50%;
 }
-.mutant-year-zero .center {
+.metro-2033 .center {
   text-align: center;
 }
-.mutant-year-zero .margin {
+.metro-2033 .margin {
   margin: 5px;
 }
-.mutant-year-zero .grow {
+.metro-2033 .grow {
   flex-grow: 1;
 }
-.mutant-year-zero .align-center {
+.metro-2033 .align-center {
   align-items: center;
 }
-.mutant-year-zero .align-end {
+.metro-2033 .align-end {
   align-items: flex-end;
 }
-.mutant-year-zero .space-around {
+.metro-2033 .space-around {
   justify-content: space-around;
 }
-.mutant-year-zero .space-between {
+.metro-2033 .space-between {
   justify-content: space-between;
 }
-.mutant-year-zero .item-form {
+.metro-2033 .item-form {
   font-family: "Karla", sans-serif;
 }
-.mutant-year-zero ol {
+.metro-2033 ol {
   margin: 0;
   list-style: none;
 }
-.mutant-year-zero input[type=checkbox]:checked, .mutant-year-zero input[type=radio]:checked {
+.metro-2033 input[type=checkbox]:checked, .metro-2033 input[type=radio]:checked {
   accent-color: #fff100;
 }
-.mutant-year-zero .sheet-header,
-.mutant-year-zero .actor-header {
+.metro-2033 .sheet-header,
+.metro-2033 .actor-header {
   flex: 0;
   display: flex;
   flex-direction: row;
@@ -473,91 +473,91 @@ $font-secondary: 'Roboto', sans-serif;*/
   justify-content: flex-start;
   align-items: flex-start !important;
 }
-.mutant-year-zero .sheet-header.npc,
-.mutant-year-zero .actor-header.npc {
+.metro-2033 .sheet-header.npc,
+.metro-2033 .actor-header.npc {
   flex: 0 0 110px;
 }
-.mutant-year-zero .sheet-header.npc h1.charname,
-.mutant-year-zero .actor-header.npc h1.charname {
+.metro-2033 .sheet-header.npc h1.charname,
+.metro-2033 .actor-header.npc h1.charname {
   height: 1em;
 }
-.mutant-year-zero .sheet-header .profile-img,
-.mutant-year-zero .actor-header .profile-img {
+.metro-2033 .sheet-header .profile-img,
+.metro-2033 .actor-header .profile-img {
   flex: 0 0 100px;
   height: 100px;
   margin-right: 10px;
 }
-.mutant-year-zero .sheet-header .header-fields,
-.mutant-year-zero .actor-header .header-fields {
+.metro-2033 .sheet-header .header-fields,
+.metro-2033 .actor-header .header-fields {
   flex: 1;
 }
-.mutant-year-zero .sheet-header h1.charname,
-.mutant-year-zero .actor-header h1.charname {
+.metro-2033 .sheet-header h1.charname,
+.metro-2033 .actor-header h1.charname {
   height: 1.2em;
   padding: 0px;
   margin: 5px 0;
   border-bottom: 0;
 }
-.mutant-year-zero .sheet-header h1.charname input,
-.mutant-year-zero .actor-header h1.charname input {
+.metro-2033 .sheet-header h1.charname input,
+.metro-2033 .actor-header h1.charname input {
   width: 100%;
   height: 100%;
   margin: 0;
 }
-.mutant-year-zero .sheet-tabs {
+.metro-2033 .sheet-tabs {
   flex: 0;
   margin-bottom: 5px;
 }
-.mutant-year-zero .sheet-body,
-.mutant-year-zero .sheet-body .tab,
-.mutant-year-zero .sheet-body .tab .editor {
+.metro-2033 .sheet-body,
+.metro-2033 .sheet-body .tab,
+.metro-2033 .sheet-body .tab .editor {
   height: 100%;
 }
-.mutant-year-zero .info,
-.mutant-year-zero .info .description,
-.mutant-year-zero .info .description .editor {
+.metro-2033 .info,
+.metro-2033 .info .description,
+.metro-2033 .info .description .editor {
   height: 180px;
 }
-.mutant-year-zero .info-mid,
-.mutant-year-zero .info-mid .description,
-.mutant-year-zero .info-mid .description .editor {
+.metro-2033 .info-mid,
+.metro-2033 .info-mid .description,
+.metro-2033 .info-mid .description .editor {
   height: 280px;
 }
-.mutant-year-zero .info-high,
-.mutant-year-zero .info-high .description,
-.mutant-year-zero .info-high .description .editor {
+.metro-2033 .info-high,
+.metro-2033 .info-high .description,
+.metro-2033 .info-high .description .editor {
   height: 380px;
 }
-.mutant-year-zero .rollable:hover, .mutant-year-zero .rollable:focus,
-.mutant-year-zero a:hover,
-.mutant-year-zero a:focus {
+.metro-2033 .rollable:hover, .metro-2033 .rollable:focus,
+.metro-2033 a:hover,
+.metro-2033 a:focus {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   cursor: pointer;
 }
-.mutant-year-zero .attribute-name {
+.metro-2033 .attribute-name {
   font-weight: 800;
   text-transform: uppercase;
 }
-.mutant-year-zero .gear-section {
+.metro-2033 .gear-section {
   padding-top: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }
-.mutant-year-zero .gear-section .col1 {
+.metro-2033 .gear-section .col1 {
   grid-column: 1/span 1;
 }
-.mutant-year-zero .gear-section .col2 {
+.metro-2033 .gear-section .col2 {
   grid-column: 2/span 4;
 }
-.mutant-year-zero .tox .tox-editor-container {
+.metro-2033 .tox .tox-editor-container {
   background: #fff;
 }
-.mutant-year-zero .tox .tox-edit-area {
+.metro-2033 .tox .tox-edit-area {
   padding: 0 8px;
 }
-.mutant-year-zero .overlay {
+.metro-2033 .overlay {
   position: absolute;
   width: 100%;
   height: 95%;
@@ -568,19 +568,19 @@ $font-secondary: 'Roboto', sans-serif;*/
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 2;
 }
-.mutant-year-zero .viewable,
-.mutant-year-zero .chatable,
-.mutant-year-zero .item-create,
-.mutant-year-zero .item-broken {
+.metro-2033 .viewable,
+.metro-2033 .chatable,
+.metro-2033 .item-create,
+.metro-2033 .item-broken {
   cursor: pointer;
 }
-.mutant-year-zero .short-input {
+.metro-2033 .short-input {
   max-width: 3em;
   text-align: center;
   background-color: white;
   color: black;
 }
-.mutant-year-zero .short-input-2em {
+.metro-2033 .short-input-2em {
   max-width: 2em;
   text-align: center;
   background-color: white;
@@ -589,13 +589,13 @@ $font-secondary: 'Roboto', sans-serif;*/
   margin-right: 0.5em;
   background-color: white;
 }
-.mutant-year-zero .short-input-2em.rot {
+.metro-2033 .short-input-2em.rot {
   background-size: cover;
   background-color: #f3f100;
   font-weight: 500;
   border: dotted 1px black;
 }
-.mutant-year-zero .num-value-1rem {
+.metro-2033 .num-value-1rem {
   max-width: 1.2em;
   max-height: 1.2rem;
   text-align: center;
@@ -603,29 +603,29 @@ $font-secondary: 'Roboto', sans-serif;*/
   color: black;
   padding: 0;
 }
-.mutant-year-zero .item-create {
+.metro-2033 .item-create {
   text-align: right;
 }
-.mutant-year-zero .checkbox-label {
+.metro-2033 .checkbox-label {
   display: inline-block;
   padding-left: 30px;
   margin-bottom: 5px;
   position: relative;
   vertical-align: middle;
 }
-.mutant-year-zero .checkbox-label input {
+.metro-2033 .checkbox-label input {
   position: absolute;
   left: 0;
   top: -3px;
   vertical-align: middle;
 }
-.mutant-year-zero .pick-npc {
+.metro-2033 .pick-npc {
   height: 100%;
   background-image: url(../ui/mutant-sheet-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
-.mutant-year-zero .pick-npc a {
+.metro-2033 .pick-npc a {
   text-transform: uppercase;
   text-decoration: none;
   background-color: #eeeeee;
@@ -633,92 +633,92 @@ $font-secondary: 'Roboto', sans-serif;*/
   padding: 20px 30px 20px 30px;
   border: 1px solid #cccccc;
 }
-.mutant-year-zero input.nolabel {
+.metro-2033 input.nolabel {
   border: none;
   border-radius: unset;
   border-bottom: 1px solid;
   margin-bottom: 2px;
   background-color: rgba(0, 0, 0, 0);
 }
-.mutant-year-zero ::placeholder {
+.metro-2033 ::placeholder {
   color: rgba(0, 0, 0, 0.4);
 }
-.mutant-year-zero .header-fields .row1 {
+.metro-2033 .header-fields .row1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
   margin-bottom: 5px;
 }
-.mutant-year-zero .header-fields .row1 :nth-child(1) {
+.metro-2033 .header-fields .row1 :nth-child(1) {
   grid-column: 1/span 3;
 }
-.mutant-year-zero .header-fields .row1 :nth-child(2) {
+.metro-2033 .header-fields .row1 :nth-child(2) {
   grid-column: 4/span 2;
 }
-.mutant-year-zero .header-fields .row1 :nth-child(3) {
+.metro-2033 .header-fields .row1 :nth-child(3) {
   grid-column: 6/span 1;
 }
-.mutant-year-zero .header-fields .row2 {
+.metro-2033 .header-fields .row2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
   margin-bottom: 5px;
 }
-.mutant-year-zero .header-fields .row2 :nth-child(1) {
+.metro-2033 .header-fields .row2 :nth-child(1) {
   grid-column: 1/span 3;
 }
-.mutant-year-zero .header-fields .row2 :nth-child(2) {
+.metro-2033 .header-fields .row2 :nth-child(2) {
   grid-column: 4/span 2;
 }
-.mutant-year-zero .header-fields .row2 :nth-child(3) {
+.metro-2033 .header-fields .row2 :nth-child(3) {
   grid-column: 6/span 1;
 }
-.mutant-year-zero .header-fields .row3 {
+.metro-2033 .header-fields .row3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
   margin-bottom: 5px;
 }
-.mutant-year-zero .header-fields .row3 :nth-child(1) {
+.metro-2033 .header-fields .row3 :nth-child(1) {
   grid-column: 1/span 4;
 }
-.mutant-year-zero .header-fields .row3 :nth-child(2) {
+.metro-2033 .header-fields .row3 :nth-child(2) {
   grid-column: 5/span 2;
 }
-.mutant-year-zero .rot-box,
-.mutant-year-zero .armor-box {
+.metro-2033 .rot-box,
+.metro-2033 .armor-box {
   border: 1px solid;
   border-bottom: 1px solid !important;
   min-height: 36px !important;
   padding: 0.3em 0 0.3em 0;
   line-height: 14px;
 }
-.mutant-year-zero .rot-box img,
-.mutant-year-zero .armor-box img {
+.metro-2033 .rot-box img,
+.metro-2033 .armor-box img {
   border: none;
   width: 26px;
   height: 26px;
 }
-.mutant-year-zero .rot-box .rot-button,
-.mutant-year-zero .armor-box .rot-button {
+.metro-2033 .rot-box .rot-button,
+.metro-2033 .armor-box .rot-button {
   cursor: pointer;
 }
-.mutant-year-zero .item-attr-row {
+.metro-2033 .item-attr-row {
   margin-bottom: 10px;
 }
-.mutant-year-zero .know-nature {
+.metro-2033 .know-nature {
   background-image: url(../ui/know-nature-circle.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   max-width: 70px;
 }
-.mutant-year-zero .know-nature input {
+.metro-2033 .know-nature input {
   background-color: rgba(0, 0, 0, 0);
   border: none;
   font-size: 22px;
 }
-.mutant-year-zero .box-encumbrance {
+.metro-2033 .box-encumbrance {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -730,72 +730,72 @@ $font-secondary: 'Roboto', sans-serif;*/
   color: black;
   background-color: white;
 }
-.mutant-year-zero .box-encumbrance.encumbered {
+.metro-2033 .box-encumbrance.encumbered {
   color: white;
   background-color: red;
   border: 1px solid rgba(0, 0, 0, 0.7);
   border-top: 0;
 }
-.mutant-year-zero .effect-textarea {
+.metro-2033 .effect-textarea {
   resize: none;
   overflow: auto;
 }
-.mutant-year-zero .input-underline {
+.metro-2033 .input-underline {
   border: none;
   border-radius: 0;
   border-bottom: 1px solid;
   background-color: unset;
 }
-.mutant-year-zero .npc-name-rank {
+.metro-2033 .npc-name-rank {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.mutant-year-zero .npc-name-rank .npc-name {
+.metro-2033 .npc-name-rank .npc-name {
   flex: 2;
 }
-.mutant-year-zero .npc-name-rank .npc-rank {
+.metro-2033 .npc-name-rank .npc-rank {
   margin-left: 1em;
   flex: 1;
 }
-.mutant-year-zero .npc-name-rank .npc-rank input {
+.metro-2033 .npc-name-rank .npc-rank input {
   text-align: center;
 }
-.mutant-year-zero .ark-header {
+.metro-2033 .ark-header {
   display: flex;
   flex: 0 0 160px;
   flex-direction: row;
 }
-.mutant-year-zero .ark-header img {
+.metro-2033 .ark-header img {
   width: 120px;
   height: 120px;
   margin-right: 10px;
 }
-.mutant-year-zero .ark-header h1.charname {
+.metro-2033 .ark-header h1.charname {
   height: 1.2em;
   padding: 0px;
   margin: 5px 0;
   border-bottom: 0;
 }
-.mutant-year-zero .ark-header h1.charname input {
+.metro-2033 .ark-header h1.charname input {
   width: 100%;
   height: 100%;
   margin: 0;
 }
-.mutant-year-zero .ark-header .header-fields {
+.metro-2033 .ark-header .header-fields {
   margin-right: 5px;
 }
-.mutant-year-zero .ark-header .dev-box {
+.metro-2033 .ark-header .dev-box {
   display: flex;
   flex-direction: column;
   margin: 5px;
   flex-grow: 1;
   border: 1px solid #333333;
 }
-.mutant-year-zero .ark-header .dev-box div:nth-child(even) {
+.metro-2033 .ark-header .dev-box div:nth-child(even) {
   background: #f0eeeb;
 }
-.mutant-year-zero .ark-header .dev-box .title-box {
+.metro-2033 .ark-header .dev-box .title-box {
   display: flex;
   min-height: 32px;
   align-items: center;
@@ -805,161 +805,167 @@ $font-secondary: 'Roboto', sans-serif;*/
   text-transform: capitalize;
   padding: 5px;
 }
-.mutant-year-zero .ark-header .dev-box .resource {
+.metro-2033 .ark-header .dev-box .resource {
   padding: 5px;
   display: flex;
   align-items: center;
 }
-.mutant-year-zero .ark-header .dev-box .resource input {
+.metro-2033 .ark-header .dev-box .resource input {
   max-width: 3em;
   text-align: center;
 }
-.mutant-year-zero .projects-box .projects-box-header {
+.metro-2033 .projects-box .projects-box-header {
   padding: 5px !important;
   background-color: #2e2c2a;
   color: blanchedalmond;
 }
-.mutant-year-zero .projects-box .project {
+.metro-2033 .projects-box .project {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.mutant-year-zero .boss-box {
+.metro-2033 .boss-box {
   padding: 5px;
   border-radius: 3px;
   border: 1px solid #7e7e7e;
 }
-.mutant-year-zero .boss-box .boss-name {
+.metro-2033 .boss-box .boss-name {
   font-weight: bold;
 }
-.mutant-year-zero .boss-box textarea {
+.metro-2033 .boss-box textarea {
   resize: vertical;
   min-height: 5.5em;
   border-color: #cccccc;
 }
-.mutant-year-zero .drop-zone-for-occupants {
+.metro-2033 .drop-zone-for-occupants {
   flex-wrap: wrap;
 }
-.mutant-year-zero .drop-zone-for-occupants .occupant {
+.metro-2033 .drop-zone-for-occupants .occupant {
   background-color: #eeeeee;
 }
-.mutant-year-zero .drop-zone-for-occupants .occupant .occupant-image {
+.metro-2033 .drop-zone-for-occupants .occupant .occupant-image {
   width: 50px;
   cursor: pointer;
 }
-.mutant-year-zero .drop-zone-for-occupants .occupant .occupant-delete {
+.metro-2033 .drop-zone-for-occupants .occupant .occupant-delete {
   cursor: pointer;
 }
-.mutant-year-zero .ship-skill-list {
+.metro-2033 .ship-skill-list {
   font-size: 0.7rem;
 }
-.mutant-year-zero .spaceship-resource-row-header {
+.metro-2033 .spaceship-resource-row-header {
   padding: 0 0.5rem;
   background-color: #342950;
   color: #e2eaf4;
 }
-.mutant-year-zero .spaceship-resource-row {
+.metro-2033 .spaceship-resource-row {
   padding: 0 0.5rem;
 }
-.mutant-year-zero .odd-child {
+.metro-2033 .odd-child {
   background-color: #e2eaf4;
   min-height: 2.2rem;
 }
-.mutant-year-zero .textarea-box {
+.metro-2033 .textarea-box {
   border: 1px solid black;
   margin-bottom: 0.2rem;
   padding: 0.2rem;
 }
-.mutant-year-zero .textarea-box textarea {
+.metro-2033 .textarea-box textarea {
   border: none;
   background-color: #e2eaf4;
   resize: none;
   overflow: auto;
 }
-.mutant-year-zero .button-roll img, .mutant-year-zero .button-push img {
+.metro-2033 .button-roll img, .metro-2033 .button-push img {
   vertical-align: middle;
   border: none;
   max-width: 1rem;
   margin-right: 0.2rem;
 }
-.mutant-year-zero .button-roll span, .mutant-year-zero .button-push span {
+.metro-2033 .button-roll span, .metro-2033 .button-push span {
   vertical-align: middle;
   font-size: 1rem;
 }
-.mutant-year-zero .uppercase {
+.metro-2033 .uppercase {
   text-transform: uppercase;
 }
-.mutant-year-zero .margin-top {
+.metro-2033 .margin-top {
   margin-top: 5px;
 }
-.mutant-year-zero .margin-right {
+.metro-2033 .margin-right {
   margin-right: 5px;
 }
-.mutant-year-zero .margin-bottom {
+.metro-2033 .margin-bottom {
   margin-bottom: 5px;
 }
-.mutant-year-zero .margin-left {
+.metro-2033 .margin-left {
   margin-left: 5px;
 }
-.mutant-year-zero .size12 {
+.metro-2033 .size12 {
   font-size: 12px;
   line-height: 14px;
 }
-.mutant-year-zero .resource-label {
+.metro-2033 .resource-label {
   font-weight: bold;
   text-transform: uppercase;
 }
-.mutant-year-zero .tabs {
+.metro-2033 .tabs {
   height: 40px;
   border-top: 1px solid #AAA;
   border-bottom: 1px solid #AAA;
 }
-.mutant-year-zero .tabs .item {
+.metro-2033 .tabs .item {
   line-height: 40px;
   line-height: 23px;
   font-family: "BigNoodleTitling";
   font-size: 1.3rem;
 }
-.mutant-year-zero .tabs .item.active {
+.metro-2033 .tabs .item.active {
   text-decoration: underline;
   text-shadow: none;
 }
-.mutant-year-zero .box-item {
+.metro-2033 .box-item {
   min-height: 30px;
   padding: 0.3em 0 0.3em 0;
   line-height: 14px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   list-style: none;
 }
-.mutant-year-zero .box-item.physical .item-name {
+.metro-2033 .box-item.physical .item-name {
   flex-basis: 45%;
 }
-.mutant-year-zero .box-item.physical .item-controls {
+.metro-2033 .box-item.physical .item-controls {
   flex-basis: 80px;
 }
-.mutant-year-zero .box-item.resource .item-name {
+.metro-2033 .box-item.resource .item-name {
   flex-basis: 60%;
 }
-.mutant-year-zero .box-item.header {
+.metro-2033 .box-item.header {
   color: ghostwhite;
   font-weight: 800;
   border: 1px solid black;
 }
-.mutant-year-zero .box-item.header.mutant {
+.metro-2033 .box-item.header.mutant {
   background-image: url("../ui/box-header-brown.png");
 }
-.mutant-year-zero .box-item.header.animal {
+.metro-2033 .box-item.header.pnj {
+  background-image: url("../ui/box-header-brown.png");
+}
+.metro-2033 .box-item.header.animal {
   background-image: url("../ui/box-header-green.png");
 }
-.mutant-year-zero .box-item.header.robot {
+.metro-2033 .box-item.header.robot {
   background-image: url("../ui/box-header-blue.png");
 }
-.mutant-year-zero .box-item.header.human {
+.metro-2033 .box-item.header.human {
   background-image: url("../ui/box-header-tile.png");
 }
-.mutant-year-zero .box-item.chassis .chassis-name {
+.metro-2033 .box-item.header.pj {
+  background-image: url("../ui/box-header-tile.png");
+}
+.metro-2033 .box-item.chassis .chassis-name {
   padding-left: 0.5em;
 }
-.mutant-year-zero .box-item.chassis .chassis-armor {
+.metro-2033 .box-item.chassis .chassis-armor {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -970,74 +976,74 @@ $font-secondary: 'Roboto', sans-serif;*/
   background-repeat: no-repeat;
   background-position: center;
 }
-.mutant-year-zero .box-item.chassis .chasis-details {
+.metro-2033 .box-item.chassis .chasis-details {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.mutant-year-zero .box-item.chassis .chasis-details :nth-child(1) {
+.metro-2033 .box-item.chassis .chasis-details :nth-child(1) {
   grid-column: 1/span 3;
 }
-.mutant-year-zero .box-item.chassis .chasis-details :nth-child(2) {
+.metro-2033 .box-item.chassis .chasis-details :nth-child(2) {
   grid-column: 4/span 1;
 }
-.mutant-year-zero .box-item .item-image {
+.metro-2033 .box-item .item-image {
   flex: 0 0 24px;
   width: 24px;
   height: 24px;
   margin-right: 0.5em;
 }
-.mutant-year-zero .box-item img {
+.metro-2033 .box-item img {
   display: block;
 }
-.mutant-year-zero .box-item .item-name {
+.metro-2033 .box-item .item-name {
   flex-basis: 70%;
   padding-left: 0.5em;
 }
-.mutant-year-zero .box-item .item-name.broken {
+.metro-2033 .box-item .item-name.broken {
   color: darkred;
 }
-.mutant-year-zero .box-item .item-values {
+.metro-2033 .box-item .item-values {
   flex-basis: 30%;
 }
-.mutant-year-zero .box-item .item-controls {
+.metro-2033 .box-item .item-controls {
   text-align: right;
   flex-basis: 30%;
   padding-right: 0.5em;
 }
-.mutant-year-zero .box-item .right-element {
+.metro-2033 .box-item .right-element {
   padding-right: 0.5em;
 }
-.mutant-year-zero .box-item .grid {
+.metro-2033 .box-item .grid {
   margin: 0;
   grid-gap: 1px;
 }
-.mutant-year-zero .box-item #context-menu {
+.metro-2033 .box-item #context-menu {
   left: unset;
   right: 0;
   min-width: unset;
   width: unset;
 }
-.mutant-year-zero .box-item #context-menu li.context-item {
+.metro-2033 .box-item #context-menu li.context-item {
   line-height: 26px;
 }
-.mutant-year-zero .box-item #context-menu .context-items {
+.metro-2033 .box-item #context-menu .context-items {
   display: flex;
 }
-.mutant-year-zero .box-item .expand-down {
+.metro-2033 .box-item .expand-down {
   top: 3px !important;
   right: 3px !important;
   bottom: 0 !important;
 }
-.mutant-year-zero .box-item .expand-up {
+.metro-2033 .box-item .expand-up {
   top: 3px !important;
   right: 3px !important;
   bottom: 0 !important;
 }
-.mutant-year-zero .box-item .item-info {
+.metro-2033 .box-item .item-info {
   background-color: #f0eeeb;
   padding: 0.2rem 0;
 }
-.mutant-year-zero .box-list {
+.metro-2033 .box-list {
   list-style: none;
   padding: 0;
   border: 1px solid black;
@@ -1046,43 +1052,51 @@ $font-secondary: 'Roboto', sans-serif;*/
   min-height: 90px;
   position: relative;
 }
-.mutant-year-zero .box-list.mutant {
+.metro-2033 .box-list.mutant {
   background-color: #f0d5b7;
 }
-.mutant-year-zero .box-list.animal {
+.metro-2033 .box-list.pnj {
+  background-color: #f0d5b7;
+}
+.metro-2033 .box-list.animal {
   background-color: #dee9d3;
 }
-.mutant-year-zero .box-list.robot {
+.metro-2033 .box-list.robot {
   background-color: #e2eaf4;
 }
-.mutant-year-zero .box-list.human {
+.metro-2033 .box-list.human {
   background-color: #e1ede9;
 }
-.mutant-year-zero .box-list.fixed-height {
+.metro-2033 .box-list.pj {
+  background-color: #e1ede9;
+}
+.metro-2033 .box-list.fixed-height {
   height: 130px;
   overflow: auto;
   margin-bottom: 0;
   position: relative;
 }
-.mutant-year-zero .box-list.fixed-height textarea {
+.metro-2033 .box-list.fixed-height textarea {
   box-sizing: border-box;
   height: 120px;
   border: none;
   resize: none;
   font-family: "Karla", sans-serif;
 }
-.mutant-year-zero .box-list .box-item:last-child {
+.metro-2033 .box-list .box-item:last-child {
   border: none;
 }
-.mutant-year-zero .box-list.conditions {
+.metro-2033 .box-list.conditions {
   font-size: small;
   min-height: 0px;
   height: 70px;
 }
-.mutant-year-zero .box-list.conditions .grid {
+.metro-2033 .box-list.conditions .grid {
   grid-gap: 6px;
   margin: 0;
 }
-.mutant-year-zero .item-unequipped {
+.metro-2033 .item-unequipped {
   color: rgba(0, 0, 0, 0.2);
-}/*# sourceMappingURL=mutant-year-zero.css.map */
+}
+
+/*# sourceMappingURL=metro-2033.css.map */

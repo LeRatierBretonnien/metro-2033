@@ -1,5 +1,5 @@
 <form class="{{cssClass}} {{system.itemType}}" autocomplete="off">
-    {{!-- HEADER --}} {{> systems/mutant-year-zero/templates/item/partials/header-simple.html}} {{!-- Sheet Body --}}
+    {{!-- HEADER --}} {{> systems/metro-2033/templates/item/partials/header-simple.html}} {{!-- Sheet Body --}}
     <div class="flexrow margin align-center">
         <label for="system.DEV_Requirement">{{localize 'MYZ.DEV_REQUIREMENT'}}</label>
         <input type="text" name="system.DEV_Requirement" value="{{system.DEV_Requirement}}" style="flex: 2" />
@@ -20,7 +20,7 @@
         <label for="system.DEV_Bonus">{{localize 'MYZ.DEV_BONUS'}}</label>
         <input type="text" name="system.DEV_Bonus" value="{{system.DEV_Bonus}}" style="flex: 2" />
     </div>
-    {{>"systems/mutant-year-zero/templates/item/partials/dev-levels.html"}}
+    {{>"systems/metro-2033/templates/item/partials/dev-levels.html"}}
     <div class="margin">
         <label for="system.special" class="uppercase">{{localize 'MYZ.SPECIAL'}}</label>
         <textarea name="system.special" style="resize: vertical">{{system.special}}</textarea>

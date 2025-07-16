@@ -17,4 +17,11 @@ export class MYZPJSheet extends MYZActorSheet {
             ],
         });
     }
+
+    /** @override */
+    async getData(options) {
+        const data = await super.getData(options);
+        console.log("DEBUG PJ-SHEET system.creatureType:", data.system?.creatureType);
+        return data;
+    }
 }

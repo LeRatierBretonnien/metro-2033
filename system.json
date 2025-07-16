@@ -1,8 +1,8 @@
 {
-  "id": "mutant-year-zero",
-  "title": "Mutant Year Zero",
-  "description": "The Official Mutant Year Zero system for FoundryVTT!",
-  "version": "13.0.2",
+  "id": "metro-2033",
+  "title": "Metro 2033",
+  "description": "Unofficial Metro 2033 system for FoundryVTT!",
+  "version": "13.0.0",
   "compatibility": {
     "minimum": "13",
     "verified": "13"
@@ -12,19 +12,24 @@
       "name": "HappySteve",
       "discord": "shteff#8724",
       "flags": {}
+    },
+    {
+      "name": "LeRatierBretonnien",
+      "discord": "LeRatierBretonnien",
+      "flags": {}
     }
   ],
   "esmodules": [
-    "module/myz.js"
+    "module/metro-2033.js"
   ],
   "styles": [
-    "css/mutant-year-zero.css"
+    "css/metro-2033.css"
   ],
   "packs": [
     {
       "name": "core-skills",
       "label": "Core Skills",
-      "system": "mutant-year-zero",
+      "system": "metro-2033",
       "path": "packs/core-skills.db",
       "type": "Item",
       "private": false,
@@ -33,7 +38,7 @@
     {
       "name": "myz-macros",
       "label": "MYZ Macros",
-      "system": "mutant-year-zero",
+      "system": "metro-2033",
       "path": "packs/myz-macros.db",
       "type": "Macro",
       "private": false,
@@ -88,9 +93,9 @@
 	  "distance": 1,
 	  "units": "m"
   },
-  "background":"systems/mutant-year-zero/assets/img/splash-page.jpg",
-  "url": "https://github.com/superseva/mutant-year-zero",
-  "manifest": "https://github.com/superseva/mutant-year-zero/releases/latest/download/system.json",
-  "download": "https://github.com/superseva/mutant-year-zero/releases/download/v13.0.2/mutant-year-zero.zip",
+  "background":"systems/metro-2033/assets/img/splash-page.jpg",
+  "url": "https://github.com/LeRatierBretonnien/metro-2033",
+  "manifest": "https://github.com/LeRatierBretonnien/metro-2033/releases/latest/download/system.json",
+  "download": "https://github.com/LeRatierBretonnien/metro-2033/releases/download/v13.0.0/metro-2033.zip",
   "license": "LICENSE"
 }
