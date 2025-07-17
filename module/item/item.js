@@ -33,13 +33,11 @@ export class MYZItem extends Item {
         itemData.img = this.img;
         itemData.isWeapon = this.type === "weapon";
         itemData.isArmor = this.type === "armor";
-        itemData.isChassis = this.type === "chassis";
         itemData.isCritical = this.type === "critical";
         itemData.isGear = this.type === "gear";
         itemData.isArtifact = this.type === "artifact";
         itemData.isTalent = this.type === "talent";
         itemData.isAbility = this.type === "ability";
-        itemData.isProject = this.type === "project";
         itemData.isSkill = this.type === "skill";
         if (this.parent)
             itemData.creatureType = this.actor.system.creatureType;
