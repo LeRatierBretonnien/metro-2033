@@ -38,7 +38,7 @@ export class MYZVehicleSheet extends foundry.appv1.sheets.ActorSheet {
             editable: this.isEditable,
             type: this.actor.type,
             isCharacter: this.actor.type === "character",
-            isNPC: this.actor.type === "npc",
+            isNPC: this.actor.type === "pnj",
             isVehicle: this.actor.type === "vehicle",
             rollData: this.actor.getRollData.bind(this.actor)
         }

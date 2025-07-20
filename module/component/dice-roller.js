@@ -100,7 +100,7 @@ export class DiceRoller {
             const actor = await fromUuid(actorUuid);
             const itemId = message.getFlag("metro-2033", "itemId") || null;
             // Deal trauma to characters and npcs
-            if(actor && actor.isOwner && ['mutant', 'animal', 'robot', 'human', 'npc'].includes(actor.type) &&
+            if(actor && actor.isOwner && ['mutant', 'animal', 'pj', 'pnj', 'station'].includes(actor.type) &&
             game.settings.get("metro-2033", "applyPushTrauma")){
                 const attributeName = message.getFlag("metro-2033", "attributeName");
                 const updateData = {};

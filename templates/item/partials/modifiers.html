@@ -31,7 +31,7 @@
         </div>
         {{#each system.skillKeysList as |key index|}}
         <div class="grid grid-3col" >
-            <span><p>{{localize (concat 'MYZ.SKILL_' key)}}</p></span>
+            <span><p>{{upperFirst key}}</p></span>
             <span style="display: flex; justify-content: center;"><input class="short-input" type="number" name="system.modifiers.{{key}}" value="{{lookup ../system.modifiers key}}" {{#ifCond (lookup ../system.modifiers key) '>' 0}}style="background-color:#026300;color:white;"{{/ifCond}}{{#ifCond (lookup ../system.modifiers key) '<' 0}}style="background-color:#800000;color:white;"{{/ifCond}}></span>
             <span style="display: flex; justify-content: center;"><input class="short-input" type="number" name="system.gearModifiers.{{key}}" value="{{lookup ../system.gearModifiers key}}" {{#ifCond (lookup ../system.gearModifiers key) '>' 0}}style="background-color:#026300;color:white;"{{/ifCond}}{{#ifCond (lookup ../system.gearModifiers key) '<' 0}}style="background-color:#800000;color:white;"{{/ifCond}}></span>
         </div>

@@ -217,7 +217,7 @@ function _migrateSkillKey(item, updateData) {
 
 // ! ADDING KNOW NATURE
 function _addKnowNatureToNPC(actor, updateData) {
-    if (actor.type == "npc") {
+    if (actor.type == "pnj") {
         if (!actor.data.hasOwnProperty('knowNature')) {
             updateData['data.knowNature'] = 0;
         }

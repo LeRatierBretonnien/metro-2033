@@ -228,6 +228,11 @@ Hooks.once("init", async function () {
         return str.toLowerCase();
     });
 
+    Handlebars.registerHelper("upperFirst", function (str) {
+        if (typeof str !== "string") return str;
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    });
+
     Handlebars.registerHelper("toUpperCase", function (str) {
         return str.toUpperCase();
     });

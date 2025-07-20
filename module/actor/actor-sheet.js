@@ -596,31 +596,31 @@ export class MYZActorSheet extends foundry.appv1.sheets.ActorSheet {
     _getRollModifiers(skill) {
         // SKILL MODIFIERS
         let skillDiceTotal = parseInt(skill.system.value);
+        let skillKey = skill.name.toLowerCase()
         const itmMap = this.actor.items.filter(itm => itm.system.modifiers != undefined)
-        const itemsThatModifySkill = itmMap.filter(i => i.system.modifiers[skill.system.skillKey] != 0)
+        const itemsThatModifySkill = itmMap.filter(i => i.system.modifiers[skillKey] != 0)
         let modifiersToSkill = [];
+        console.log("SKILLKEY", itmMap, skill, itemsThatModifySkill, skill.name.toLowerCase())
 
-        if(skill.system.skillKey!=""){
-            const skillDiceModifier = itemsThatModifySkill.reduce(function (acc, obj) {
-                modifiersToSkill.push({ 'type': obj.type, 'name': obj.name, 'value': obj.system.modifiers[skill.system.skillKey] })
-                return acc + obj.system.modifiers[skill.system.skillKey];
-            }, 0);
-            skillDiceTotal += parseInt(skillDiceModifier)
-        }
+        const skillDiceModifier = itemsThatModifySkill.reduce(function (acc, obj) {
+              modifiersToSkill.push({ 'type': obj.type, 'name': obj.name, 'value': obj.system.modifiers[skillKey] })
+              return acc + obj.system.modifiers[skillKey];
+          }, 0);
+        skillDiceTotal += parseInt(skillDiceModifier)
+
         // ATTRIBUTE MODIFIERS
         const attrModifiers = this._getAttibuteModifiers(skill.system.attribute)
         // GEAR MODIFIERS
         const itmGMap = this.actor.items.filter(itm => itm.system.gearModifiers != undefined)
-        const itemsThatModifyGear = itmGMap.filter(i => i.system.gearModifiers[skill.system.skillKey] != 0)
+        const itemsThatModifyGear = itmGMap.filter(i => i.system.gearModifiers[skillKey] != 0)
         let modifiersToGear = []
         let gearDiceTotal = 0
-        if(skill.system.skillKey!=""){
-            const gearDiceModifier = itemsThatModifyGear.reduce(function (acc, obj) {
-                modifiersToGear.push({ 'type': obj.type, 'name': obj.name, 'value': obj.system.gearModifiers[skill.system.skillKey] })
-                return acc + obj.system.gearModifiers[skill.system.skillKey];
-            }, 0);
-            gearDiceTotal = parseInt(gearDiceModifier)
-        }
+
+        const gearDiceModifier = itemsThatModifyGear.reduce(function (acc, obj) {
+                modifiersToGear.push({ 'type': obj.type, 'name': obj.name, 'value': obj.system.gearModifiers[skillKey] })
+                return acc + obj.system.gearModifiers[skillKey];
+          }, 0);
+        gearDiceTotal = parseInt(gearDiceModifier)
 
         return {
             skillDiceTotal: skillDiceTotal,

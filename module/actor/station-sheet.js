@@ -38,7 +38,7 @@ export class MYZStationSheet extends foundry.appv1.sheets.ActorSheet {
             editable: this.isEditable,
             type: this.actor.type,
             isCharacter: this.actor.type === "character",
-            isNPC: this.actor.type === "npc",
+            isNPC: this.actor.type === "pnj",
             isVehicle: this.actor.type === "vehicle",
             isSpaceship: this.actor.type === "spaceship",
             rollData: this.actor.getRollData.bind(this.actor)
