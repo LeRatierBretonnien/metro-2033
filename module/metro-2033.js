@@ -114,8 +114,8 @@ Hooks.once("init", async function () {
     _preloadHandlebarsTemplates();
 
     Handlebars.registerHelper("concat", function () {
-        var outStr = "";
-        for (var arg in arguments) {
+        let outStr = "";
+        for (let arg in arguments) {
             if (typeof arguments[arg] != "object") {
                 outStr += arguments[arg];
             }
@@ -163,10 +163,7 @@ Hooks.once("init", async function () {
     });
 
     Handlebars.registerHelper("isArtifact", function (item) {
-        if (item.system.dev_requirement != "" || item.system.dev_bonus != "") {
-            return true;
-        }
-        return false;
+        return (item.system.dev_requirement != "" || item.system.dev_bonus != "")
     });
 
     Handlebars.registerHelper("ifCond", function (v1, operator, v2, options) {
@@ -210,13 +207,13 @@ Hooks.once("init", async function () {
     });
 
     Handlebars.registerHelper("trimString3", function (passedString) {
-        var theString = passedString.substring(0, 3);
+        let theString = passedString.substring(0, 3);
         return new Handlebars.SafeString(theString);
     });
 
     Handlebars.registerHelper("createLocalizationString", function () {
         let fullString = "";
-        for (var i = 0; i < arguments.length; i++) {
+        for (let i = 0; i < arguments.length; i++) {
             if (typeof arguments[i] === "string" || arguments[i] instanceof String) {
                 fullString += arguments[i];
                 if (i + 2 < arguments.length) {
@@ -264,7 +261,6 @@ Hooks.once("init", async function () {
     });
 
     Handlebars.registerHelper('anyDefined', function() {
-        const options = arguments[arguments.length - 1];
         // Exclude the last argument (Handlebars options object)
         return Array.prototype.slice.call(arguments, 0, -1).some(v => v !== undefined && v !== null);
         });

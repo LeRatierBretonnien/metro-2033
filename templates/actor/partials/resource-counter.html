@@ -1,6 +1,24 @@
-<div class="box-item header flex row space-between align-center {{system.creatureType}}" style="margin-bottom: 5px">
+<!-- <div class="box-item header flex row space-between align-center {{system.creatureType}}" style="margin-bottom: 5px">
     <label class="item-name" for="system.resource_points.value">{{localize (toUpperCase (concat 'MYZ.RESOURCE_POINTS_' system.creatureType ))}}</label>
     <span class="right-element">
         <input class="short-input" type="number" name="system.resource_points.value" value="{{system.resource_points.value}}" />
+    </span>
+</div>-->
+<div class="box-item header flex row space-between align-center {{system.creatureType}}" style="margin-bottom: 5px">
+    <label class="item-name" for="system.resource_points.value">{{localize "MYZ.RADIATIONS"}}</label>
+    <span class="right-element">
+        <input class="short-input" type="number" name="system.counters.radiations.value" value="{{system.counters.radiations.value}}" />
+    </span>
+</div>
+<div class="box-item header flex row space-between align-center {{system.creatureType}}" style="margin-bottom: 5px">
+    <label class="item-name" for="system.resource_points.value">{{localize "MYZ.STRESS"}}</label>
+    <span class="right-element">
+        <input class="short-input" type="number" name="system.counters.stress.value" value="{{system.counters.stress.value}}" />
+    </span>
+</div>
+<div class="box-item header flex row space-between align-center {{system.creatureType}}" style="margin-bottom: 5px">
+    <label class="item-name" for="system.resource_points.value">{{localize "MYZ.SANGFROID"}}</label>
+    <span class="right-element">
+        <input class="short-input" type="number" name="system.counters.sangfroid.value" value="{{system.counters.sangfroid.value}}" />
     </span>
 </div>
