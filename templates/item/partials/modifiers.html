@@ -4,19 +4,19 @@
         <h3 style="text-transform:uppercase; text-align: center; font-weight: 900;">{{localize 'MYZ.BASE_DICE'}}</h3>
         <div>
             <div class="flex space-between">
-                <p>{{localize 'MYZ.ATTRIBUTE_STRENGTH_MUTANT'}} / {{localize 'MYZ.ATTRIBUTE_STRENGTH_ROBOT'}}</p>
+                <p>{{localize 'MYZ.ATTRIBUTE_STRENGTH_MUTANT'}}</p>
                 <input class="short-input" type="number" name="system.modifiers.strength" value="{{system.modifiers.strength}}" {{#ifCond system.modifiers.strength '>' 0}}style="background-color:#026300;color:white;"{{/ifCond}}{{#ifCond system.modifiers.strength '<' 0}}style="background-color:#800000;color:white;"{{/ifCond}}>
             </div>
             <div class="flex space-between">
-                <p>{{localize 'MYZ.ATTRIBUTE_AGILITY_MUTANT'}} / {{localize 'MYZ.ATTRIBUTE_AGILITY_ROBOT'}}</p>
+                <p>{{localize 'MYZ.ATTRIBUTE_AGILITY_MUTANT'}}</p>
                 <input class="short-input" type="number" name="system.modifiers.agility" value="{{system.modifiers.agility}}" {{#ifCond system.modifiers.agility '>' 0}}style="background-color:#026300;color:white;"{{/ifCond}}{{#ifCond system.modifiers.agility '<' 0}}style="background-color:#800000;color:white;"{{/ifCond}}>
             </div>
             <div class="flex space-between">
-                <p>{{localize 'MYZ.ATTRIBUTE_WITS_MUTANT'}} / {{localize 'MYZ.ATTRIBUTE_WITS_ROBOT'}}</p>
+                <p>{{localize 'MYZ.ATTRIBUTE_WITS_MUTANT'}}</p>
                 <input class="short-input" type="number" name="system.modifiers.wits" value="{{system.modifiers.wits}}" {{#ifCond system.modifiers.wits '>' 0}}style="background-color:#026300;color:white;"{{/ifCond}}{{#ifCond system.modifiers.wits '<' 0}}style="background-color:#800000;color:white;"{{/ifCond}}>
             </div>
             <div class="flex space-between">
-                <p>{{localize 'MYZ.ATTRIBUTE_EMPATHY_MUTANT'}} / {{localize 'MYZ.ATTRIBUTE_EMPATHY_ANIMAL'}} / {{localize 'MYZ.ATTRIBUTE_EMPATHY_ROBOT'}}</p>
+                <p>{{localize 'MYZ.ATTRIBUTE_EMPATHY_MUTANT'}}</p>
                 <input class="short-input" type="number" name="system.modifiers.empathy" value="{{system.modifiers.empathy}}" {{#ifCond system.modifiers.empathy '>' 0}}style="background-color:#026300;color:white;"{{/ifCond}}{{#ifCond system.modifiers.empathy '<' 0}}style="background-color:#800000;color:white;"{{/ifCond}}>
             </div>
         </div>

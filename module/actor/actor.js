@@ -73,7 +73,7 @@ export class MYZActor extends Actor {
     // add items
     let physicalItems = this.items.filter(i => i.system.weight != undefined);
     let weightedItems = physicalItems.filter(_itm => _itm.system.weight > 0 && !_itm.system.stashed);
-    var itemsWeight = weightedItems.reduce(function (accumulator, i) {
+    let itemsWeight = weightedItems.reduce(function (accumulator, i) {
       return accumulator + (parseInt(i.system.quantity) * Number(i.system.weight));
     }, 0);
     _totalWeight += Number(itemsWeight);

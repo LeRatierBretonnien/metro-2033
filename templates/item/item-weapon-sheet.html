@@ -3,7 +3,8 @@
 
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="details">{{localize "MYZ.DETAILS"}}</a>
-        <a class="item" data-tab="artifact">{{localize "MYZ.ARTIFACT"}}</a>
+        <!-- <a class="item" data-tab="artifact">{{localize "MYZ.ARTIFACT"}}</a> -->
+        <a class="item" data-tab="modifiers">{{localize "MYZ.MODIFIERS"}}</a>
     </nav>
     <div class="sheet-body">
         <div class="tab" data-group="primary" data-tab="details">
@@ -57,5 +58,8 @@
             </div>
             {{>"systems/metro-2033/templates/item/partials/dev-levels.html"}}
         </div>
+
+    {{>"systems/metro-2033/templates/item/partials/modifiers.html"}}
+
     </div>
 </form>

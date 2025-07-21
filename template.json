@@ -206,7 +206,7 @@
 		}
 	},
 	"Item": {
-		"types": ["weapon", "armor", "skill", "ability", "talent", "gear", "artifact", "critical"],
+		"types": ["weapon", "armor", "skill", "ability", "talent", "gear", "critical"],
 		"templates": {
 			"base": {
 				"description": "",
