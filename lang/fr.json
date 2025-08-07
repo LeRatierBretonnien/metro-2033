@@ -52,6 +52,7 @@
   "MYZ.ARMOR_RATING": "Valeur",
   "MYZ.ARMOR_ROT_PROTECTION": "Valeur vs gangrène",
   "MYZ.ARMOR_SHIELD": "Bouclier",
+  "MYZ.ARMOR_HELMET": "Casque",
   "MYZ.ARMOR_TYPE": "Type",
   "MYZ.ARTIFACT": "Artefact",
   "MYZ.ARTIFACT_BONUS": "Bonus d'artefact",
@@ -309,5 +310,17 @@
   "SETTINGS.ApplyPushGearDamageH": "Appliquer ou non les dégâts à l'équipement suite à un jet forcé.",
   "SETTINGS.ApplyPushGearDamageN": "Appliquer les dégâts aux équipements",
   "SETTINGS.ApplyPushTraumaH": "Appliquer ou non les traumatismes suite à un jet forcé.",
-  "SETTINGS.ApplyPushTraumaN": "Appliquer les traumatismes"
+  "SETTINGS.ApplyPushTraumaN": "Appliquer les traumatismes",
+  "MYZ.STATION.Stats" : "Stats",
+  "MYZ.STATION.Water" : "Eau",
+  "MYZ.STATION.Food" : "Nourriture",
+  "MYZ.STATION.Equipment" : "Équipement",
+  "MYZ.STATION.Energy" : "Énergie",
+  "MYZ.STATION.Medics" : "Médicaments",
+  "MYZ.STATION.CREW" : "Population",
+  "MYZ.STATION.Population" : "Population",
+  "MYZ.STATION.Gear_Bonus" : "Bonus d'équipement",
+  "MYZ.STATION.Crew_Count" : "Population",
+  "MYZ.STATION.Skills" : "Compétences",
+  "MYZ.STATION.CARGO" : "Réserves"
 }

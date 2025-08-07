@@ -3,7 +3,7 @@
     <div class="item-values flexrow center align-center">
         <label>{{localize 'MYZ.ARMOR_RATING'}}</label>
         <label>{{localize 'MYZ.ARMOR_TYPE'}}</label>
-        <label>{{localize 'MYZ.ARMOR_ROT_PROTECTION'}}</label>
+        <!-- <label>{{localize 'MYZ.ARMOR_ROT_PROTECTION'}}</label> -->
     </div>
     <div class="item-controls">
         <a class="item-create" data-type="armor">{{localize "MYZ.Add"}}</a>
@@ -22,7 +22,7 @@
                 <input type="number" class="owned-item-value num-value-1rem" value="{{armor.system.rating.value}}" data-linked-value="system.rating.value" data-item-id="{{armor._id}}">
                 <label>/{{armor.system.rating.max}}</label>
             </span>
-            <label style="align-self: center;">{{localize (toUpperCase (concat "MYZ." armor.system.armorType))}}</label>
+            <label style="align-self: center;">{{localize (toUpperCase (concat "MYZ." armor.system.armorType))}}</label> 
             <!-- <a style="align-self: center;" class="rollable armor-rot-protection-roll">{{armor.system.rot.value}}</a> -->
         </div>
         <div class="item-controls">

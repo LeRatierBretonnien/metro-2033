@@ -176,19 +176,22 @@
 			"cost":0
 		},
 		"station":{
-			"hull":{
+			"water":{
 				"max":0, "value":0
 			},
-			"sensors":{
+			"food":{
 				"max":0, "value":0
 			},
-			"engine":{
+			"equipment":{
 				"max":0, "value":0
 			},
-			"lifeSupport":{
+			"energy":{
 				"max":0, "value":0
 			},
-			"crew":{
+			"medics":{
+				"max":0, "value":0
+			},
+			"population":{
 				"passengers":0, "items":0,"description":""
 			},
 			"cargo":{

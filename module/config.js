@@ -43,11 +43,13 @@ export class MYZ {
     }
 
     static ITEM_SIZES = {
-        "0.00": "MYZ.WEIGHT_TINY",
-        "0.25": "MYZ.WEIGHT_QUARTER",
-        "0.50": "MYZ.WEIGHT_LIGHT",
-        "1.00": "MYZ.WEIGHT_REGULAR",
-        "2.00": "MYZ.WEIGHT_HEAVY"
+        "0.00": "0",
+        "0.25": "1/4",
+        "0.50": "1/2",
+        "1.00": "1",
+        "2.00": "2",
+        "3.00": "3",
+        "4.00": "4"
     }
 
     static WEAPON_CATEGORIES = {
@@ -58,6 +60,7 @@ export class MYZ {
     static ARMOR_TYPES = {
         "armor": "MYZ.ARMOR_BODY",
         "shield": "MYZ.ARMOR_SHIELD",
+        "helent": "MYZ.ARMOR_HELMET"
     }
 
     static TALENT_CREATURE_TYPES = {
