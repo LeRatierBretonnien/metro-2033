@@ -151,6 +151,22 @@
 			"special": ""
 		},
 		"vehicle":{
+      "movement": {
+        "max":0,
+        "value":0
+      },
+      "integrity": {
+        "max":0,
+        "value":0
+      },
+      "reliability": {
+        "max":0,
+        "value":0
+      },
+      "shielding": {
+        "max":0,
+        "value":0
+      },
 			"movementBonus":{
 				"max":0,
 				"current":0
@@ -303,6 +319,8 @@
 			"range": "range_arm",
 			"category": "",
 			"artifactBonus": 0,
+      "reliability": "-",
+      "hands": "1M",
 			"skillBonus": 0
 		},
 		"armor": {

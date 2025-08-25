@@ -18,6 +18,8 @@
   "TYPES.Item.talent": "Talent",
   "TYPES.Item.weapon": "Weapon",
   "MYZ": {
+    "RELIABILITY": "Fiability",
+    "HANDS": "Hands",
     "BASE_DICE": "Base Dice",
     "DETAILS": "Details",
     "GEAR_DICE": "GEAR DICE",
@@ -27,6 +29,9 @@
     "SKILL_DICE_MODIFIER": "Skill Dice Modifier",
     "SKILL_NAME": "Skill Name",
     "VEHICLE":{
+      "INTEGRITY":"Intégrity",
+      "RELIABILITY":"Reliability",
+      "SHIELDING": "Shielding",
       "OCCUPANTS":"Occupants",
       "OCCUPANTS_COUNT": "Occupants #",
       "RESILIENCE":"Resilience",

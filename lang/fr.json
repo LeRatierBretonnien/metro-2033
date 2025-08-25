@@ -18,6 +18,12 @@
   "TYPES.Item.talent": "Talent",
   "TYPES.Item.weapon": "Arme",
   "MYZ": {
+    "HAND_1H": "1M",
+    "HAND_2H": "2M",
+    "HAND_1_2H": "1M/2M",
+    "RELIABILITY": "Fiabilité",
+    "HANDS": "Prise",
+    "HELMET": "Casque",
     "BASE_DICE": "Dés de base",
     "DETAILS": "Détails",
     "GEAR_DICE": "Dés d'équipement",
@@ -31,8 +37,11 @@
       "OCCUPANTS_COUNT": "Passagers #",
       "RESILIENCE":"Résistance",
       "ARMOR":"Armure",
+      "INTEGRITY":"Intégrité",
+      "RELIABILITY":"Fiabilité",
+      "SHIELDING": "Blindage",
       "FUEL":"Carburant",
-      "MOVE_BONUS":"Bonus d'équipement"
+      "MOVE_BONUS":"Déplacement"
     }
   },
   "MYZ.ABILITIES": "Capacités",
