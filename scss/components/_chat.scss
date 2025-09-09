@@ -47,7 +47,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         align-content: space-between;
-        
+
         .dice{
             scale: 0;
             img {
@@ -87,16 +87,17 @@
                 img {
                     //filter: grayscale(75%);
                 }
-                
+
             }
         }
     }
 
+    .push-button-affliction,
     .push-button{
         margin: 5px;
         max-width: 160px;
     }
-    
+
 
     i {
         margin-left: 2px;
@@ -141,11 +142,11 @@
                 i{
                     color:#a67060;
                 }
-            }    
+            }
         }
     }
 
-    .modifiers{        
+    .modifiers{
         font-size: smaller;
         $transparency: 0.32;
         .modifiers-list{
@@ -164,7 +165,7 @@
             margin: 0;
             padding: 2px;
             list-style-type: none;
-            
+
         }
     }
 }

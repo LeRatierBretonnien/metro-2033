@@ -316,6 +316,12 @@ Hooks.on("renderChatMessageHTML", (message, html, data) => {
   html = $(html);
   if (message.isAuthor || game.user.isGM) {
 
+    html.find('.push-button-affliction').click((ev) => {
+      ev.stopImmediatePropagation();
+      ev.preventDefault();
+      DiceRoller.processAffliction(message, html, data, ev);
+    });
+
     html.find('.push-button').click((ev) => {
       ev.stopImmediatePropagation();
       ev.preventDefault();
@@ -384,7 +390,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       "systems/metro-2033/ui/dice/s5.png",
       "systems/metro-2033/ui/dice/s6.png",
     ],
-    colorset: "green",
+    colorset: "yellow",
     system: "metro-2033",
   });
   dice3d.addDicePreset({
@@ -397,7 +403,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
       "systems/metro-2033/ui/dice/g5.png",
       "systems/metro-2033/ui/dice/g6.png",
     ],
-    colorset: "black",
+    colorset: "yellow",
     system: "metro-2033",
   });
 });

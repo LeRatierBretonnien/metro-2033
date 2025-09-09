@@ -16,7 +16,7 @@
 
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
-    <a class="item" data-tab="attributes">{{localize "MYZ.ATTRIBUTES"}}</a>
+    <a class="item" data-tab="attributes">Ressources</a>
     <a class="item" data-tab="crew">{{localize "MYZ.STATION.CREW"}}</a>
     <a class="item" data-tab="gear">{{localize "MYZ.STATION.CARGO"}}</a>
     <a class="item" data-tab="info">{{localize "MYZ.INFO"}}</a>
@@ -25,14 +25,11 @@
   <div class="sheet-body">
     <div class="tab" data-group="primary" data-tab="attributes">
       <div class="box-list">
-        <div class="flexrow align-center STATION-resource-row-header">
-          <p><strong>{{localize "MYZ.STATION.Stats"}}:</strong></p>
-          <p><strong>{{localize "MYZ.STATION.Gear_Bonus"}}:</strong></p>
-          <p><strong>{{localize "MYZ.STATION.Skills"}}:</strong></p>
-        </div>
         <div class="flexrow align-center odd-child STATION-resource-row ">
           <label><strong>{{localize "MYZ.STATION.Water"}}:</strong></label>
           <div>
+            <input class="nolabel short-input" data-tooltip="Soutien" type="checkbox" name="system.water.soutien" {{#if
+              system.water.soutien}}checked{{/if}} />
             <input class="nolabel short-input" type="number" data-type="Number" name="system.water.value"
               value="{{system.water.value}}" />
             <span>/</span>
@@ -43,6 +40,8 @@
         <div class="flexrow align-center STATION-resource-row">
           <label><strong>{{localize "MYZ.STATION.Food"}}:</strong></label>
           <div>
+            <input class="nolabel short-input" data-tooltip="Soutien" type="checkbox" name="system.food.soutien" {{#if
+              system.food.soutien}}checked{{/if}} />
             <input class="nolabel short-input" type="number" data-type="Number" name="system.food.value"
               value="{{system.food.value}}" />
             <span>/</span>
@@ -53,6 +52,8 @@
         <div class="flexrow align-center odd-child STATION-resource-row">
           <label><strong>{{localize "MYZ.STATION.Equipment"}}:</strong></label>
           <div>
+            <input class="nolabel short-input" data-tooltip="Soutien" type="checkbox" name="system.equipment.soutien"
+              {{#if system.equipment.soutien}}checked{{/if}} />
             <input class="nolabel short-input" type="number" data-type="Number" name="system.equipment.value"
               value="{{system.equipment.value}}" />
             <span>/</span>
@@ -63,6 +64,8 @@
         <div class="flexrow align-center STATION-resource-row">
           <label><strong>{{localize "MYZ.STATION.Energy"}}:</strong></label>
           <div>
+            <input class="nolabel short-input" data-tooltip="Soutien" type="checkbox" name="system.energy.soutien" {{#if
+              system.energy.soutien}}checked{{/if}} />
             <input class="nolabel short-input" type="number" data-type="Number" name="system.energy.value"
               value="{{system.energy.value}}" />
             <span>/</span>
@@ -73,6 +76,8 @@
         <div class="flexrow align-center STATION-resource-row">
           <label><strong>{{localize "MYZ.STATION.Medics"}}:</strong></label>
           <div>
+            <input class="nolabel short-input" data-tooltip="Soutien" type="checkbox" name="system.medics.soutien" {{#if
+              system.medics.soutien}}checked{{/if}} />
             <input class="nolabel short-input" type="number" data-type="Number" name="system.medics.value"
               value="{{system.medics.value}}" />
             <span>/</span>
