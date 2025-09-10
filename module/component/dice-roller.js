@@ -150,8 +150,8 @@ export class DiceRoller {
       throw new Error("No dice pool found in message flags");
 
     // Get dice with results
-    // base dice with 1 or 6, gear dice with 1 or 6, skill dice with 6
-    const diceWithResults = message.getFlag("metro-2033", "dicePool").filter(d => (d.diceType === "base" && (d.value === 1 || d.value === 6)) || (d.diceType === "gear" && (d.value === 1 || d.value === 6)) || (d.diceType === "skill" && d.value === 6));
+    // base dice with 6, gear dice with 6, skill dice with 6
+    const diceWithResults = message.getFlag("metro-2033", "dicePool").filter(d => (d.diceType === "base" && (d.value === 6)) || (d.diceType === "gear" && (d.value === 6)) || (d.diceType === "skill" && d.value === 6));
     // add property oldRoll to each dice
     diceWithResults.forEach(d => {
       d.hasResult = true;
@@ -207,16 +207,6 @@ export class DiceRoller {
         const baneCount = DiceRoller.CountFailures(finalPool) - traumaCount;
         if (baneCount > 0) {
           this.showAfflictionMessage(actor, baneCount, message);
-          // Decreases the attribute.
-          /*const attributes = actor.system.attributes || {};
-          const attribute = attributes[attributeName];
-          if (attribute?.value > 0) {
-            const { value, min } = attribute;
-            const newVal = Math.max(min, value - baneCount);
-            if (newVal !== value) {
-              updateData[`system.attributes.${attributeName}.value`] = newVal;
-            }
-          }*/
           // Adds Resources Points only to Mutants and Animals
           if (['mutant', 'animal'].includes(actor.type) || ['mutant', 'animal'].includes(actor.system.creatureType)) {
             const resPts = actor.system['resource_points'] ?? { value: 0, max: 10 };
@@ -235,7 +225,6 @@ export class DiceRoller {
         if (!foundry.utils.isEmpty(updateData)) {
           await actor.update(updateData);
         }
-
       }
 
       // Applies pushed roll effect to the gear.
@@ -386,7 +375,7 @@ export class DiceRoller {
   static CountFailures(dicePool) {
     let result = 0;
     dicePool.forEach((dice) => {
-      if (dice.value === 1 && dice.diceType === "base") {
+      if (dice.value === 1) {
         result++;
       }
     });
