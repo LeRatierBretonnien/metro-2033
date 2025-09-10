@@ -151,7 +151,12 @@ export class DiceRoller {
 
     // Get dice with results
     // base dice with 6, gear dice with 6, skill dice with 6
-    const diceWithResults = message.getFlag("metro-2033", "dicePool").filter(d => (d.diceType === "base" && (d.value === 6)) || (d.diceType === "gear" && (d.value === 6)) || (d.diceType === "skill" && d.value === 6));
+    let diceWithResults
+    if (game.settings.get("metro-2033", "rerollOne")) {
+      diceWithResults = message.getFlag("metro-2033", "dicePool").filter(d => (d.diceType === "base" && (d.value === 6)) || (d.diceType === "gear" && (d.value === 6)) || (d.diceType === "skill" && d.value === 6));
+    } else {
+      diceWithResults = message.getFlag("metro-2033", "dicePool").filter(d => (d.diceType === "base" && (d.value === 1 || d.value === 6)) || (d.diceType === "gear" && (d.value === 1 || d.value === 6)) || (d.diceType === "skill" && (d.value === 6)));
+    }
     // add property oldRoll to each dice
     diceWithResults.forEach(d => {
       d.hasResult = true;

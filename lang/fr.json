@@ -322,6 +322,8 @@
   "MYZ.XP": "PE",
   "MYZ.ASKAFFLICTION": "Appliquer les Afflictions",
   "MYZ.TRAUMA": "Affliction",
+  "SETTINGS.RerollOneN": "Relancer les 1 sur les jets forcés",
+  "SETTINGS.RerollOneH": "Relancer les 1 sur les jets forcés (mode YZE legacy)",
   "SETTINGS.ApplyPushGearDamageH": "Appliquer ou non les dégâts à l'équipement suite à un jet forcé.",
   "SETTINGS.ApplyPushGearDamageN": "Appliquer les dégâts aux équipements",
   "SETTINGS.ApplyPushTraumaH": "Appliquer ou non les Afflictions suite à un jet forcé.",
