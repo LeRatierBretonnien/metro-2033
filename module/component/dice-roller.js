@@ -163,8 +163,15 @@ export class DiceRoller {
     });
 
     // Get the dice count for the dice without results and create a new roll formula
-    const baseCount = message.getFlag("metro-2033", "dicePool").filter(d => (d.diceType === "base" && (d.value != 1 && d.value != 6))).length;
-    const skillCount = message.getFlag("metro-2033", "dicePool").filter(d => d.diceType === "skill" && d.value != 6).length;
+    let baseCount = 0;
+    let skillCount = 0;
+    if (game.settings.get("metro-2033", "rerollOne")) {
+      baseCount = message.getFlag("metro-2033", "dicePool").filter(d => (d.diceType === "base" && (d.value != 6))).length;
+      skillCount = message.getFlag("metro-2033", "dicePool").filter(d => d.diceType === "skill" && d.value != 6).length;
+    } else {
+      baseCount = message.getFlag("metro-2033", "dicePool").filter(d => (d.diceType === "base" && (d.value != 1 && d.value != 6))).length;
+      skillCount = message.getFlag("metro-2033", "dicePool").filter(d => d.diceType === "skill" && d.value != 6).length;
+    }
     const gearCount = message.getFlag("metro-2033", "dicePool").filter(d => d.diceType === "gear" && (d.value != 1 && d.value != 6)).length;
     const rollFormula = `${baseCount}db + ${skillCount}ds + ${gearCount}dg`;
     const roll = new Roll(rollFormula);
