@@ -80,9 +80,8 @@ export class MYZ {
   }
 
   static TALENT_CREATURE_TYPES = {
-    "mutant": "MYZ.TALENT_MUTANT",
-    "animal": "MYZ.TALENT_ANIMAL",
-    "pnj": "MYZ.TALENT_PNJ"
+    "pnj": "MYZ.TALENT_PNJ",
+    "pj": "MYZ.TALENT_PJ"
   }
 
   static TALENT_ROLE_TYPES = {
