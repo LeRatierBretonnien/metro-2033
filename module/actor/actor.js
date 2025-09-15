@@ -30,18 +30,12 @@ export class MYZActor extends Actor {
    * Prepare Character type specific data
    */
   _prepareMutantData() {
-    // Update ROT
-    // if (this.system.rot.value < this.system.rot.min) {
-    //     this.system.rot.value = this.system.rot.min;
-    // }
-
-    // Update armor
-    // let armor = this.items._source.find((i) => i.type == "armor" && i.system.equipped);
-    // if (armor) {
-    //     this.system.armorrating.value = parseInt(armor.system.rating.value);
-    // } else {
-    //     this.system.armorrating.value = 0;
-    // }
+    if (this.type == "pj") {
+      this.system.creatureType = "pj";
+    } else {
+      this.system.creatureType = "pnj";
+    }
+    
     let equippedArmor = this.items.filter(i => i.type == "armor" && !i.system.stashed && i.system.equipped && i.system.armorType == "armor");
     if (equippedArmor.length) {
       let equippedArmorTotal = equippedArmor.reduce(function (acc, obj) { return parseInt(acc) + parseInt(obj.system.rating.value); }, 0);

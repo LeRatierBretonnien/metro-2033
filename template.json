@@ -301,7 +301,7 @@
 		},
 		"ability": {
 			"templates": ["base", "modifiers-group"],
-			"creatureType": "",
+			"creatureType": "pj",
 			"abilityType": "",
 			"effect": "",
 			"roleType": "",
@@ -311,7 +311,7 @@
 			"templates": ["base", "modifiers-group"],
 			"effect": "",
 			"roleType": "general",
-			"creatureType": ""
+			"creatureType": "pj"
 		},
 		"weapon": {
 			"templates": ["base", "physical", "bonus", "dev", "modifiers-group"],

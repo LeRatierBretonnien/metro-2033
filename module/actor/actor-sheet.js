@@ -134,7 +134,7 @@ export class MYZActorSheet extends foundry.appv1.sheets.ActorSheet {
     // pack inventory for NPCs
     if (context.actor.type == "pnj") {
       context.npcInventory = [...gear, ...artifacts]
-      if (context.system.creatureType == "mutant") {
+      if (context.system.creatureType == "pnj") {
         context.npcInventory = [...context.npcInventory, ...chassis]
       }
       else if (context.system.creatureType == "animal") {
