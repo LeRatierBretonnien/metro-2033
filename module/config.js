@@ -18,7 +18,8 @@ export class MYZ {
 
   static CREATURE_TYPES = {
     "pj": "MYZ.PJ",
-    "mutant": "MYZ.MUTANT"
+    //"mutant": "MYZ.PNJ",
+    "pnj": "MYZ.PNJ"
   }
 
   static ATTRIBUTES = {
