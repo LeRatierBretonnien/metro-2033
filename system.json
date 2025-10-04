@@ -95,7 +95,7 @@
   },
   "background":"systems/metro-2033/ui/landing_page_metro_2033.webp",
   "url": "https://github.com/LeRatierBretonnien/metro-2033",
-  "manifest": "https://github.com/LeRatierBretonnien/metro-2033/releases/latest/download/system.json",
-  "download": "https://github.com/LeRatierBretonnien/metro-2033/releases/download/v13.0.13/metro-2033.zip",
+  "manifest": "https://raw.githubusercontent.com/LeRatierBretonnien/metro-2033/refs/tags/13.0.13/system.json",
+  "download": "https://github.com/LeRatierBretonnien/metro-2033/archive/refs/tags/13.0.13.zip",
   "license": "LICENSE"
 }
