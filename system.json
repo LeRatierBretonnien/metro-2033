@@ -2,7 +2,7 @@
   "id": "metro-2033",
   "title": "Metro 2033",
   "description": "Unofficial Metro 2033 system for FoundryVTT!",
-  "version": "13.0.13",
+  "version": "13.0.14",
   "compatibility": {
     "minimum": "13",
     "verified": "13"
@@ -28,10 +28,19 @@
   "packs": [
     {
       "name": "core-data",
-      "label": "Core Data",
+      "label": "Metro 2033 - Core Data",
       "system": "metro-2033",
       "path": "packs/core-data",
       "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "core-actors",
+      "label": "Metro 2033 - Core Actors",
+      "system": "metro-2033",
+      "path": "packs/core-actors",
+      "type": "Actor",
       "private": false,
       "flags": {}
     },
@@ -96,6 +105,6 @@
   "background":"systems/metro-2033/ui/landing_page_metro_2033.webp",
   "url": "https://github.com/LeRatierBretonnien/metro-2033",
   "manifest": "https://raw.githubusercontent.com/LeRatierBretonnien/metro-2033/refs/heads/master/system.json",
-  "download": "https://github.com/LeRatierBretonnien/metro-2033/archive/refs/tags/13.0.13.zip",
+  "download": "https://github.com/LeRatierBretonnien/metro-2033/archive/refs/tags/13.0.14.zip",
   "license": "LICENSE"
 }
