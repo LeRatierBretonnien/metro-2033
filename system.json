@@ -36,6 +36,15 @@
       "flags": {}
     },
     {
+      "name": "core-table",
+      "label": "Metro 2033 - Core Tables",
+      "system": "metro-2033",
+      "path": "packs/core-table",
+      "type": "RollTable",
+      "private": false,
+      "flags": {}
+    },
+    {
       "name": "core-actors",
       "label": "Metro 2033 - Core Actors",
       "system": "metro-2033",
