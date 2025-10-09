@@ -2,7 +2,7 @@
   "id": "metro-2033",
   "title": "Metro 2033",
   "description": "Unofficial Metro 2033 system for FoundryVTT!",
-  "version": "13.0.14",
+  "version": "13.0.15",
   "compatibility": {
     "minimum": "13",
     "verified": "13"
@@ -114,6 +114,6 @@
   "background":"systems/metro-2033/ui/landing_page_metro_2033.webp",
   "url": "https://github.com/LeRatierBretonnien/metro-2033",
   "manifest": "https://raw.githubusercontent.com/LeRatierBretonnien/metro-2033/refs/heads/master/system.json",
-  "download": "https://github.com/LeRatierBretonnien/metro-2033/archive/refs/tags/13.0.14.zip",
+  "download": "https://github.com/LeRatierBretonnien/metro-2033/archive/refs/tags/13.0.15.zip",
   "license": "LICENSE"
 }
